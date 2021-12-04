@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Login page</title>
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/brands.min.css"
+         integrity="sha512-rQgMaFKZKIoTKfYInSVMH1dSM68mmPYshaohG8pK17b+guRbSiMl9dDbd3Sd96voXZeGerRIFFr2ewIiusEUgg=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+      />
+      <link rel="stylesheet" href="./style.css" />
+   </head>
+   <body>
+      <!-- <div class="container"></div>
+      <div class="form-container sign-up-container">
+         <form>
+            <h1>Create Account</h1>
+            <div class="social-container">
+               <a href="#" class="social"><i class="fab fa-facebook"></i></a>
+               <a href="#" class="social"><i class="fab fa-linkedin"></i></a>
+               <a href="#" class="social"><i class="fab fa-instagram"></i></a>
+            </div>
+            <span>Create account for free</span>
+            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Email" />
+            <input type="text" placeholder="Password" />
+            <button>Sign up</button>
+         </form>
+      </div>
+
+      <div class="form-container sign-up-container">
+         <form>
+            <h1>Sign In</h1>
+            <div class="social-container">
+               <a href="#" class="social"><i class="fab fa-facebook"></i></a>
+               <a href="#" class="social"><i class="fab fa-linkedin"></i></a>
+               <a href="#" class="social"><i class="fab fa-instagram"></i></a>
+            </div>
+            <span>Create account for free</span>
+            <input type="text" placeholder="Email" />
+            <input type="text" placeholder="Password" />
+            <button>Sign In</button>
+         </form>
+      </div> -->
+
+      <div class="container">
+         <div class="blue">
+            <div class="box signIn">
+               <h2>Already have an account?</h2>
+               <button class="signInBtn">Sign-In</button>
+            </div>
+            <div class="box signUp">
+               <h2>Dont have an account?</h2>
+               <button class="signUpBtn">Sign-Up</button>
+            </div>
+         </div>
+         <div class="formBx">
+            <div class="form signInForm">
+               <form>
+                  <h3>Sign In</h3>
+                  <input type="text" placeholder="Email" />
+                  <input type="text" placeholder="Password" />
+                  <input type="submit" value="Login" />
+               </form>
+            </div>
+            <div class="form signUpForm hide">
+               <form>
+                  <h3>Sign Up</h3>
+                  <input type="text" placeholder="Name" />
+                  <input type="text" placeholder="Email" />
+                  <input type="text" placeholder="Password" />
+                  <input id='red' type="submit" value="Sign Up" />
+               </form>
+            </div>
+         </div>
+      </div>
+
+      <script>
+         const signInBtn = document.querySelector(".signInBtn");
+         const signUpBtn = document.querySelector(".signUpBtn");
+         const formBx = document.querySelector(".formBx");
+         const body = document.querySelector("body");
+         const signInForm = document.querySelector(".signInForm");
+         const signUpForm = document.querySelector(".signUpForm");
+
+         signUpBtn.onclick = () => {
+            formBx.classList.add("active");
+            body.classList.add("active");
+            signUpForm.classList.remove("hide");
+            signInForm.classList.add("hide");
+         };
+         signInBtn.onclick = () => {
+            console.log("click");
+            formBx.classList.remove("active");
+            body.classList.remove("active");
+            signUpForm.classList.add("hide");
+            signInForm.classList.remove("hide");
+         };
+      </script>
+   </body>
+</html>
